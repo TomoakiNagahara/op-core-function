@@ -7,6 +7,11 @@
  * @copyright  Tomoaki Nagahara All right reserved.
  */
 
+/**	namespace
+ *
+ */
+namespace OP;
+
 /**	Get php core error const name from error number.
  *
  * <pre>
