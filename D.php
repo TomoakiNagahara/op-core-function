@@ -52,4 +52,7 @@ function D()
 			return;
 		};
 	};
+
+	//	Fallback to native var_dump(), if Dump unit is unavailable.
+	var_dump(func_get_args());
 }
