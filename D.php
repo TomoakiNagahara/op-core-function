@@ -15,3 +15,41 @@
  * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
+
+/**	Dump values for debugging, visible only to administrators.
+ *
+ * Simply call "D()" to dump values for debugging purposes.
+ *
+ * <pre>
+ * D( $_SESSION );
+ * </pre>
+ *
+ * @genesis    ????-??-??  by op-core-4:/$op->Dump()
+ * @porting    2025-06-14  at op-core-function:/D()
+ */
+function D()
+{
+	//	Skip execution if the user is not an administrator.
+	if(!OP\OP::isAdmin() ){
+		return;
+	};
+
+	//	Try loading the Dump unit.
+	if(!OP\Unit::Load('Dump') ){
+
+		/*  Why is this necessary?
+		//	Throw away last time Notice.
+		OP\Error::Pop();
+		*/
+
+		//	If the Dump unit class exists, perform a dump using it.
+		if( class_exists('OP\UNIT\Dump') ){
+
+			//	Call the Mark method to dump the passed arguments.
+			'OP\UNIT\Dump'::Mark( func_get_args() );
+
+			//	Stop further execution.
+			return;
+		};
+	};
+}
