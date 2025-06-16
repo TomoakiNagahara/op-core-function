@@ -37,7 +37,8 @@ function D()
 	//	Try loading the Dump unit.
 	if(!OP\Unit::Load('Dump') ){
 
-		/*  Why is this necessary?
+		/* Q: Why is this necessary?
+		 * A: If `Unit::Load()` fails, Error is raised. Use `Unit::isInstalled()`;
 		//	Throw away last time Notice.
 		OP\Error::Pop();
 		*/
