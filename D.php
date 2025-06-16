@@ -35,25 +35,10 @@ function D()
 	};
 
 	//	Try loading the Dump unit.
-	if(!OP\Unit::Load('Dump') ){
-
-		/* Q: Why is this necessary?
-		 * A: If `Unit::Load()` fails, Error is raised. Use `Unit::isInstalled()`;
-		//	Throw away last time Notice.
-		OP\Error::Pop();
-		*/
-
-		//	If the Dump unit class exists, perform a dump using it.
-		if( class_exists('OP\UNIT\Dump') ){
-
-			//	Call the Mark method to dump the passed arguments.
-			'OP\UNIT\Dump'::Mark( func_get_args() );
-
-			//	Stop further execution.
-			return;
-		};
-	};
-
-	//	Fallback to native var_dump(), if Dump unit is unavailable.
-	var_dump(func_get_args());
+	if( OP\Unit::isInstalled('Dump') ){
+		OP()->Unit()->Dump()->Mark( func_get_args() );
+	}else{
+		//	Fallback to native var_dump(), if Dump unit is unavailable.
+		var_dump(func_get_args());
+	}
 }
