@@ -27,7 +27,7 @@ function Encode($value, $charset='utf-8')
 	switch( gettype($value) ){
 		case 'string':
 			$value = str_replace("\0", '\0', $value);
-			return htmlentities($value, ENT_QUOTES, $charset, false);
+			return OP::isShell() ? escapeshellarg($value) : htmlentities($value, ENT_QUOTES, $charset, false);
 
 		case 'array':
 			$result = [];
