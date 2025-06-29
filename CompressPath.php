@@ -73,6 +73,7 @@ function CompressPath($path)
 		if( $pos === 0 ){
 			//	...
 			$path = substr($path, strlen($root));
+			$path = ltrim($path, '/');
 
 			//	...
 			return "{$meta}:/{$path}";
