@@ -18,8 +18,13 @@ namespace OP;
  * @param  string $attr
  * @return array  $result
  */
-function Attribute(string $attr)
+function Attribute( ?string $attr='' ) : array
 {
+	//	...
+	if( empty($attr) ){
+		return [];
+	}
+
 	//	...
 	$key = 'tag';
 	$result = null;
