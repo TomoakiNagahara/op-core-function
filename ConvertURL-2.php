@@ -42,17 +42,17 @@ function ConvertURL($url)
 		//	Calc document root.
 		foreach(['doc','real'] as $key){
 			//	...
-			$doc_root = RootPath()[$key];
+			$doc_root = RootPath()[$key] ?? null;
 
 			//	Check if document root.
-			if( 0 === strpos($url, $doc_root) ){
+			if( $doc_root and 0 === strpos($url, $doc_root) ){
 				//	Return compressed document root path.
 				return substr($url, strlen($doc_root));
 			}
 		}
 
 		//	...
-		OP::Notice("This full path is not document root path. ($url)");
+		OP::Notice("This full path is not document root path: {$url}");
 		return false;
 	}
 
