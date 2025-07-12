@@ -31,11 +31,14 @@ namespace OP;
  * ConvertURL('app:/index.php');  --> /onepiece-app/index.php
  *
  * @created   2020-03-08
- * @param     string       $meta_url
+ * @param     string       $path
  * @return    string       $document_root_url
  */
-function ConvertURL($url)
+function ConvertURL( string $path )
 {
+	//	...
+	$url = $path;
+
 	//	Check if full path.
 	if( $url[0] === '/' and $url[1] !== '/' ){
 
@@ -52,7 +55,8 @@ function ConvertURL($url)
 		}
 
 		//	...
-		OP::Notice("This full path is not document root path: {$url}");
+		$doc_root = _ROOT_DOC_;
+		OP::Notice("This full path is not document root path: doc={$doc_root}, path={$path}");
 		return false;
 	}
 
