@@ -41,7 +41,7 @@ function ConvertURL( string $path )
 
 	//	Check if full path.
 	if( $url[0] === '/' and $url[1] !== '/' ){
-
+		/*
 		//	Calc document root.
 		foreach(['doc','real'] as $key){
 			//	...
@@ -53,11 +53,32 @@ function ConvertURL( string $path )
 				return substr($url, strlen($doc_root));
 			}
 		}
+		*/
 
 		//	...
-		$doc_root = _ROOT_DOC_;
-		OP::Error("This full path is not document root path: doc={$doc_root}, path={$path}");
-		return false;
+		if( strpos($path, _ROOT_ASSET_) === 0 ){
+			OP::Notice("This path is the asset root path: {$path}");
+			return;
+		}
+
+		//	...
+		if( strpos(_ROOT_APP_, _ROOT_DOC_) === 0 ){
+			//	...
+			if( strpos($path, ltrim(_ROOT_APP_,'/')) === 0 ){
+				//	...
+				$len = strlen( ltrim(_ROOT_APP_,'/') );
+				$url = 'app:/' . substr($path, $len);
+			}else if( strpos($path, realpath(_ROOT_APP_)) === 0 ){
+				//	...
+				$len = strlen( realpath(_ROOT_APP_) );
+				$url = 'app:/' . ltrim( substr($path, $len), '/');
+			}else{
+			//	...
+			$doc_root = _ROOT_DOC_;
+			OP::Error("This full path is not document root path: doc={$doc_root}, path={$path}");
+			return false;
+			}
+		}
 	}
 
 	//	Separate URL Query.
@@ -89,7 +110,7 @@ function ConvertURL( string $path )
 
 	//	Check if asset path.
 	if( strpos($full_path, RootPath('asset')) === 0 ){
-		OP::Notice("This is asset root path. ($url)");
+		OP::Notice("This path is the asset root path: {$url}");
 		return;
 	}
 
