@@ -56,7 +56,7 @@ function ConvertURL( string $path )
 
 		//	...
 		$doc_root = _ROOT_DOC_;
-		OP::Notice("This full path is not document root path: doc={$doc_root}, path={$path}");
+		OP::Error("This full path is not document root path: doc={$doc_root}, path={$path}");
 		return false;
 	}
 
