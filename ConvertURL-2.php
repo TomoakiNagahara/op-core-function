@@ -55,19 +55,19 @@ function ConvertURL( string $path )
 		}
 		*/
 
-		//	...
+		//	Check if asset root path.
 		if( strpos($path, _ROOT_ASSET_) === 0 ){
 			OP::Notice("This path is the asset root path: {$path}");
 			return;
 		}
 
-		//	...
+		//	Check if document root path.
 		if( strpos(_ROOT_APP_, _ROOT_DOC_) === 0 ){
 			//	...
-			if( strpos($path, ltrim(_ROOT_APP_,'/')) === 0 ){
+			if( strpos($path, _ROOT_APP_) === 0 ){
 				//	...
-				$len = strlen( ltrim(_ROOT_APP_,'/') );
-				$url = 'app:/' . substr($path, $len);
+				$len = strlen(_ROOT_APP_);
+				$url = 'app:/' . ltrim( substr($path, $len), '/');
 			}else if( strpos($path, realpath(_ROOT_APP_)) === 0 ){
 				//	...
 				$len = strlen( realpath(_ROOT_APP_) );
