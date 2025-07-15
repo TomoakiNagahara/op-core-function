@@ -57,7 +57,7 @@ function ConvertURL( string $path )
 
 		//	Check if asset root path.
 		if( strpos($path, _ROOT_ASSET_) === 0 ){
-			OP::Notice("This path is the asset root path: {$path}");
+			OP::Error("This path is the asset root path: {$path}");
 			return;
 		}
 
@@ -104,13 +104,13 @@ function ConvertURL( string $path )
 
 	//	Convert to full path.
 	if(!$full_path = ConvertPath($url, false, false) ){
-		OP::Notice("ConvertPath() is return false.");
+		OP::Error("ConvertPath() is return false.");
 		return;
 	}
 
 	//	Check if asset path.
 	if( strpos($full_path, RootPath('asset')) === 0 ){
-		OP::Notice("This path is the asset root path: {$url}");
+		OP::Error("This path is the asset root path: {$url}");
 		return;
 	}
 
@@ -119,7 +119,7 @@ function ConvertURL( string $path )
 
 	//	Check whether document root path.
 	if( strpos($full_path, $doc_root) !== 0 ){
-		OP::Notice("This path is not the document root path. (doc={$doc_root}, full={$full_path})");
+		OP::Error("This path is not the document root path. (doc={$doc_root}, full={$full_path})");
 		return false;
 	};
 
