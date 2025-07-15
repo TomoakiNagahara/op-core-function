@@ -57,12 +57,13 @@ function CompressPath($path)
 		return false;
 	}
 
-	/*
-	//	real --> git
+	//	Check if the path is a real path, and convert it to the git root.
 	if( strpos($path, $root_path['real']) === 0 ){
+		/*
 		$path = str_replace($root_path['real'], $root_path['git'], $path);
+		*/
+		$path = $root_path['git'] . substr($path, strlen($root_path['real']));
 	}
-	*/
 
 	//	...
 	foreach( array_reverse($root_path) as $meta => $root ){
