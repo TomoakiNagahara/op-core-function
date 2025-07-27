@@ -55,11 +55,13 @@ function ConvertURL( string $path )
 		}
 		*/
 
+		/* This check is duplicate.
 		//	Check if asset root path.
 		if( strpos($path, _ROOT_ASSET_) === 0 ){
 			OP::Error("This path is the asset root path: {$path}");
 			return;
 		}
+		*/
 
 		//	Check if document root path.
 		if( strpos(_ROOT_APP_, _ROOT_DOC_) === 0 ){
