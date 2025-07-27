@@ -43,12 +43,24 @@ function ConvertPath(string $path, bool $throw_exception=true, $file_exists=true
 
 	//	Root path
 	if( $path[0] === '/' ){
-		throw new \Exception("This path is not meta path. A path from \"/\" can not be specified. ({$path})");
+		$error = "This path is not meta path. A path from \"/\" can not be specified. ({$path})";
+		if( $throw_exception ){
+			throw new \Exception($error);
+		}else{
+			OP::Error($error);
+			return '';
+		}
 	}
 
 	//	Parent path.
 	if( strpos($path, '..') !== false ){
-		throw new \Exception("Upper directory cannot be specified. ($path)");
+		$error = "Upper directory cannot be specified. ($path)";
+		if( $throw_exception ){
+			throw new \Exception($error);
+		}else{
+			OP::Error($error);
+			return '';
+		}
 	}
 
 	//	Check meta label
@@ -58,7 +70,13 @@ function ConvertPath(string $path, bool $throw_exception=true, $file_exists=true
 
 		//	Check exists meta label.
 		if(!$root = RootPath($meta) ){
-			throw new \Exception("This meta label is not exists. ($path)");
+			$error = "This meta label is not exists. ($path)";
+			if( $throw_exception ){
+				throw new \Exception($error);
+			}else{
+				OP::Error($error);
+				return '';
+			}
 		};
 
 		//	...
@@ -75,7 +93,13 @@ function ConvertPath(string $path, bool $throw_exception=true, $file_exists=true
 		//	Add current directory.
 		$path = getcwd() . '/' . $path;
 		*/
-		throw new \Exception("Meta label not found. ({$path})");
+		$error = "Meta label not found. ({$path})";
+		if( $throw_exception ){
+			throw new \Exception($error);
+		}else{
+			OP::Error($error);
+			return '';
+		}
 	};
 
 	// Check if file exists.
