@@ -2,6 +2,9 @@
 /**	op-core-function:/GetMimeFromExtension.php
  *
  * @created    2020-08-10
+ * @version    1.0
+ * @package    op-core
+ * @subpackage function
  * @author     Tomoaki Nagahara
  * @copyright  Tomoaki Nagahara All right reserved.
  */
@@ -13,10 +16,6 @@ namespace OP;
 
 /**	Get MIME from extension.
  *
- * @created    2020-08-10
- * @version    1.0
- * @package    op-core
- * @subpackage function
  * @param  string $extension
  * @return string $mime
  */
