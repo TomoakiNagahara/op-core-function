@@ -47,6 +47,9 @@ function GetMimeFromExtension(string $ext):string
 		case 'jpeg':
 			$mime = "image/{$ext}";
 			break;
+		case 'svg':
+			$mime = "image/svg+xml";
+			break;
 		case 'ico':
 			$mime = "image/vnd.microsoft.icon";
 			break;
