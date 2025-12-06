@@ -2,8 +2,10 @@
 /**	op-core-function:/Layout.php
  *
  * @created    2021-01-10
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2021 Tomoaki Nagahara
  */
 
 /**	namespace
@@ -15,9 +17,6 @@ namespace OP;
  *
  * @deprecated 2025-05-19
  * @created    2021-01-10
- * @version    1.0
- * @package    op-core
- * @subpackage function
  * @param      null|boolean|string $value  is execute flag or layout name.
  * @return     boolean|string      $result is execute flag or layout name.
  */

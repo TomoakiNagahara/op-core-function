@@ -1,12 +1,12 @@
 <?php
 /**	op-core-function:/CompressPath.php
  *
- * @genesis    ????-??-??  op-core-5:/OnePiece.class.php
+ * @genesis    2011-??-??  op-core-5:/OnePiece.class.php
  * @created    2022-10-12  From op-core:/functions.php
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2011 Tomoaki Nagahara
  */
 
 /**	namespace

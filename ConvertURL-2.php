@@ -3,10 +3,10 @@
  *
  * @genesis    ????-??-??  op-core-5:/OnePiece.class.php
  * @created    2020-03-08
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2011 Tomoaki Nagahara
  */
 
 /**	Declare strict

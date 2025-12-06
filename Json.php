@@ -1,11 +1,11 @@
 <?php
 /**	op-core-function:/Json.php
  *
- * @moved      2025-06-16
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @moved      2016-06-16
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2016 Tomoaki Nagahara
  */
 
 /**	namespace

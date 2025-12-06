@@ -2,10 +2,10 @@
 /**	op-core-function:/Decode.php
  *
  * @created    2025-06-16
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2012 Tomoaki Nagahara
  */
 
 /**	namespace

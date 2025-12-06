@@ -2,10 +2,10 @@
 /**	op-core-function:/Hasha1.php
  *
  * @moved      2025-08-20  from op-core:/Functions.php
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2016 Tomoaki Nagahara
  */
 
 /**	namespace

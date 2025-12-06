@@ -3,10 +3,10 @@
  *
  * @created    2022-10-05
  * @moved      2025-06-13
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2022 Tomoaki Nagahara
  */
 
 /**	Return instantiated OP instance.

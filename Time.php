@@ -2,10 +2,10 @@
 /**	op-core-function:/Time.php
  *
  * @created    2023-03-29
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2023 Tomoaki Nagahara
  */
 
 /**	Declare strict

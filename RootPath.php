@@ -2,10 +2,10 @@
 /**	op-core-function:/RootPath.php
  *
  * @created    2020-05-23
- * @version    1.0
- * @package    op-core-function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @license    Apache-2.0
+ * @package    op-core
+ * @subpackage function
+ * @copyright  (C) 2020 Tomoaki Nagahara
  */
 
 /**	namespace

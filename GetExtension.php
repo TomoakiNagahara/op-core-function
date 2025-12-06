@@ -2,11 +2,10 @@
 /**	op-core-function:/GetExtension.php
  *
  * @created    2020-05-08
- * @version    1.0
+ * @license    Apache-2.0
  * @package    op-core
  * @subpackage function
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @copyright  (C) 2020 Tomoaki Nagahara
  */
 
 /**	namespace

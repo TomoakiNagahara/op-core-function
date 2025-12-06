@@ -1,12 +1,12 @@
 <?php
 /**	op-core:/function/ConvertPath.php
  *
- * @genesis    ????-??-??  op-core-5:/OnePiece.class.php
+ * @genesis    2011-??-??  op-core-5:/OnePiece.class.php
  * @created    2020-05-10
- * @version    1.0
+ * @license    Apache-2.0
  * @package    op-core
- * @author     Tomoaki Nagahara
- * @copyright  Tomoaki Nagahara All right reserved.
+ * @subpackage function
+ * @copyright  (C) 2011 Tomoaki Nagahara
  */
 
 /**	Declare strict
