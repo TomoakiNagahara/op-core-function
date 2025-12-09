@@ -57,7 +57,9 @@ function Mail( string $to, string $subject, string $message, array $headers=[] )
 				$addr = join(',', $value);
 				break;
 			default:
-				D( gettype($value) );
+				if(!OP()->isCI() ){
+					D( $label, gettype($value) );
+				}
 				continue 2;
 		}
 		$headers .= "{$label}: {$addr}\r\n";
