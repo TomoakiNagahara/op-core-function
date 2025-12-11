@@ -33,11 +33,11 @@ namespace OP;
  *
  * @created  2019-09-24
  * @moved    2023-03-29  OP\Env::Timestamp()
- * @param    boolean     $utc
  * @param    string      $offset
+ * @param    boolean     $utc
  * @return   string      $timestamp
  */
-function Timestamp(?bool $utc=false, $offset=null):string
+function Timestamp( ?string $offset=null, ?bool $utc=false ) : string
 {
 	//	...
 	require_once(__DIR__.'/Time.php');
