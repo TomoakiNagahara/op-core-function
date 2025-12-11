@@ -43,7 +43,7 @@ function Timestamp( ?string $offset=null, ?bool $utc=false ) : string
 	require_once(__DIR__.'/Time.php');
 
 	//	...
-	$time = Time($utc);
+	$time = Time(utc:$utc);
 
 	//	...
 	if( $offset ){
