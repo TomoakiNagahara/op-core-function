@@ -22,11 +22,11 @@ namespace OP;
  *
  * @created  ????-??-??
  * @moved    2023-03-29  OP\Env::Time()
- * @param    boolean     $utc
  * @param    string      $time
+ * @param    boolean     $utc
  * @return   integer     $time
  */
-function Time(?bool $utc=false, ?string $time=''):int
+function Time( ?string $time=null, ?bool $utc=false ) : int
 {
 	//	...
 	static $_time;
