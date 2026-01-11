@@ -65,6 +65,11 @@ function Mail( string $to, string $subject, string $message, array $headers=[] )
 		$headers .= "{$label}: {$addr}\r\n";
 	}
 
+	//	Check if a github action environment.
+	if( OP()->Unit()->CI()->isGitHubActions() ){
+		return false;
+	}
+
 	//	...
 	return \mail($to, $subject, $message, $headers);
 }
