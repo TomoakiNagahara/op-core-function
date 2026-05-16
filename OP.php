@@ -1,6 +1,8 @@
 <?php
 /**	op-core-function:/OP.php
  *
+ * OP() is namespace-free gateway!
+ *
  * @created    2022-10-05
  * @moved      2025-06-13
  * @license    Apache-2.0
