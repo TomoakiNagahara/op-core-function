@@ -95,7 +95,7 @@ function ConvertURL( string $path )
 		$scheme = $_SERVER['REQUEST_SCHEME'];
 
 		//	...
-		$host = $_SERVER['HTTP_HOST'];
+		$host = $_SERVER['SERVER_NAME'];
 
 		//	...
 		$uri = $_SERVER['REQUEST_URI'];
